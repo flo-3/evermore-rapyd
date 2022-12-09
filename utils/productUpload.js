@@ -1,3 +1,5 @@
+// The interactions with the decentralized storage are not displayed on this project
+
 async function uploadProductMetadata(product) {
   try {
     // Upload product metadata on IPFS (decentralized storage)

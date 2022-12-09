@@ -1,3 +1,5 @@
+// The blockchain interactions are not displayed on this project
+
 async function createCustodialWallet(entity) {
   try {
     // Create a custodial wallet

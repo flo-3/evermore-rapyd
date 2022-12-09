@@ -56,7 +56,7 @@ app.post('/user', async function(req, res) {
   const user = req.body;
   console.log(user);
   completeUser = await createCustodialWallet(user);
-  completeUser = await createPersonalWallet(completeUser, users.length + 265);
+  completeUser = await createPersonalWallet(completeUser, users.length);
   if (completeUser) {
     users.push(completeUser);
     res.send(`User is added to the database with ID ${users.length-1} and Rapyd wallet ID ${completeUser.ewallet_reference_id}`);
@@ -76,7 +76,7 @@ app.post('/company', async function(req, res) {
   const company = req.body;
   console.log(company);
   completeCompany = await createCustodialWallet(company);
-  completeCompany = await createCompanyWallet(completeCompany, companies.length +40);
+  completeCompany = await createCompanyWallet(completeCompany, companies.length);
   if (completeCompany) {
     companies.push(completeCompany);
     res.send(`Company is added to the database with ID ${companies.length-1} and Rapyd wallet ID ${completeCompany.ewallet_reference_id}`);
